@@ -1,0 +1,164 @@
+/*
+ * button style
+ */
+.buttonCommon() {
+  .inline-block();
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  font-size: @baseFontSize;
+  line-height: @baseLineHeight;
+  *line-height: @baseLineHeight;
+  padding: .4em 1.2em;
+
+  .box-shadow(inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05));
+  .ie7-restore-left-whitespace(); // Give IE7 some love
+
+  &:hover {
+    text-decoration: none;
+    .reset-gradient-filter();
+    background-image: none;
+  }
+
+  &:focus {
+    .tab-focus();
+  }
+
+// Active state
+  &:active {
+    outline: 0;
+    .box-shadow(inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05));
+    .reset-gradient-filter();
+    background-image: none;
+  }
+
+  // Disabled state
+  &.btn-disabled {
+    cursor: default;
+    .reset-gradient-filter();
+    background-image: none;
+    .opacity(65);
+    outline: 0;
+    .box-shadow(none);
+  }
+}
+.button(@startColor, @endColor, @borderColor:@endColor, @textColor: #fff, @textShadow: 0 -1px 0 rgba(0,0,0,.25)) {
+  color: @textColor;
+  text-shadow: @textShadow;
+  #gradient > .vertical(@startColor, @endColor);
+  border: 1px solid @borderColor;
+  border-bottom-color: darken(@borderColor, 10%);
+
+  //ie6 ie7 black border bug
+  *border: 0; // Remove the border to prevent IE7's black border on input:focus
+  *background-color:darken(mix(@startColor, @endColor, 50%), 3%); /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  *filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
+
+  &:hover {
+    color: @textColor;
+    background-color: @endColor; // ie6 ie7
+    *background-color: darken(@endColor, 5%); // ie6 ie7
+  }
+
+  // Active state
+  &:active {
+    background-color: darken(@endColor, 8%);
+  }
+
+  // Disabled state
+  &.btn-disabled, &.btn-disabled:hover, &.btn-disabled:active {
+    background-color: mix(@startColor, @endColor, 50%);
+  }
+
+}
+// Button
+// ------------------------------------
+.btn {
+  .buttonCommon();
+  .button(@btnBackground, @btnBackgroundHighlight, @btnBorder, @grayDark, 0 1px 1px rgba(255,255,255,.75));
+  .border-radius(4px);
+  .ie9-reset-radius();
+}
+
+// ie6 ie7 hack
+button.btn, input.btn {
+  *line-height: @baseLineHeight - .4em;
+}
+
+a.btn {
+  margin: 0px;
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+// Button Sizes
+// --------------------------------------------------
+// Larger
+.btn-larger {
+  font-size: @baseFontSize + 8px;
+  .border-radius(6px);
+  .ie9-reset-radius();
+}
+
+// Large
+.btn-large {
+  font-size: @baseFontSize + 4px;
+  .border-radius(5px);
+  .ie9-reset-radius();
+}
+
+// Small
+.btn-small {
+  font-size: @baseFontSize - 2px;
+}
+
+// Smaller
+.btn-smaller {
+  font-size: @baseFontSize - 4px;
+}
+
+.btn-primary {
+  .button(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight, @btnPrimaryBackgroundHighlight, @btnPrimaryTextColor);
+}
+
+// Warning appears are orange
+.btn-warn {
+  .button(@btnWarnBackground, @btnWarnBackgroundHighlight, @btnWarnBackgroundHighlight, @btnWarnTextColor);
+}
+
+// Danger and error appear as red
+.btn-important, .btn-error {
+  .button(@btnErrorBackground, @btnErrorBackgroundHighlight, @btnErrorBackgroundHighlight, @btnErrorTextColor);
+}
+
+// Success appears as green
+.btn-success {
+  .button(@btnSuccessBackground, @btnSuccessBackgroundHighlight, @btnSuccessBackgroundHighlight, @btnSuccessTextColor);
+}
+
+// Info appears as a neutral blue
+.btn-info {
+  .button(@btnInfoBackground, @btnInfoBackgroundHighlight, @btnInfoBackgroundHighlight, @btnInfoTextColor);
+}
+
+// Inverse appears as dark gray
+.btn-inverse {
+  .button(@btnInverseBackground, @btnInverseBackgroundHighlight, @btnInverseBackgroundHighlight, @btnInverseTextColor);
+}
+
+// Block button
+// -------------------------
+.btn-block {
+  display: block;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+// ie6 btn-disabled
+.btn-disabled,.btn-disabled:hover,.btn-disabled:active{
+  _background-color:#e9e9e9 !important;
+  _color: #fff !important;
+  _filter: ~"alpha(opacity=90)";
+}
