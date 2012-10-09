@@ -1,0 +1,49 @@
+/*
+ * progress-bar
+ */
+.progress {
+  overflow: hidden;
+  height: @baseLineHeight;
+  background-color: #FFF;
+  border: 1px solid darken(@barSuccess, 15%);
+  .border-radius(4px);
+}
+.progress .bar {
+  display: block;
+  float: left;
+  width: 0%;
+  height: 100%;
+  color: @white;
+  font-size: 12px;
+  text-align: center;
+  #gradient > .vertical(lighten(@barSuccess, 10%), @barSuccess);
+}
+
+// info
+.progress-info {
+  border-color: darken(@barInfo, 15%);
+}
+.progress-info .bar, .progress .bar-info {
+  #gradient > .vertical(lighten(@barInfo, 10%), @barInfo);
+}
+// warn
+.progress-warn {
+  border-color: darken(@barWarn, 15%);
+}
+.progress-warn .bar, .progress .bar-warn {
+  #gradient > .vertical(lighten(@barWarn, 10%), @barWarn);
+}
+// error
+.progress-error {
+  border-color: darken(@barError, 15%);
+}
+.progress-error .bar, .progress .bar-error {
+  #gradient > .vertical(lighten(@barError, 10%), @barError);
+}
+// success
+.progress-success {
+  border-color: darken(@barSuccess, 15%);
+}
+.progress-success .bar, .progress .bar-success {
+  #gradient > .vertical(lighten(@barSuccess, 10%), @barSuccess);
+}

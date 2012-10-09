@@ -115,9 +115,9 @@ q:before,q:after,blockquote:before,blockquote:after{content:"";}
 .row-fluid .span7{margin-left:1%;margin-right:1%;width:56.333333333333336%;*clear:right;}
 .row-fluid .span6{margin-left:1%;margin-right:1%;width:48%;*clear:right;}
 .row-fluid .span5{margin-left:1%;margin-right:1%;width:39.66666666666667%;*clear:right;}
-.row-fluid .span4{margin-left:1%;margin-right:1%;width:31.333333333333335%;*clear:right;}
+.row-fluid .span4{margin-left:1%;margin-right:1%;width:31.333333333333336%;*clear:right;}
 .row-fluid .span3{margin-left:1%;margin-right:1%;width:23%;*clear:right;}
-.row-fluid .span2{margin-left:1%;margin-right:1%;width:14.666666666666667%;*clear:right;}
+.row-fluid .span2{margin-left:1%;margin-right:1%;width:14.666666666666668%;*clear:right;}
 .row-fluid .span1{margin-left:1%;margin-right:1%;width:6.333333333333334%;*clear:right;}
 .row-fluid .offset11{margin-left:92.66666666666667%;}
 .row-fluid .offset10{margin-left:84.33333333333334%;}
@@ -273,3 +273,13 @@ a.emlabel:hover,a.badge:hover{color:#ffffff;text-decoration:none;}
 .notify-info{background-color:#d9edf7;border-color:#86A0EF;color:#3a87ad;}.notify-info .notify-icon{background-position:0 -123px;}
 .notify-success{background-color:#F4FFEF;border-color:#4EBF3B;color:#4F9F51;}.notify-success .notify-icon{background-position:0 -189px;}
 .notify-error{background-color:#f2dede;border-color:#DF7D7D;color:#b94a48;}.notify-error .notify-icon{background-position:0 -57px;}
+.progress{overflow:hidden;height:1.5em;background-color:#FFF;border:1px solid #3ca83c;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;}
+.progress .bar{display:block;float:left;width:0%;height:100%;color:#ffffff;font-size:12px;text-align:center;background-color:#7ed17e;background-image:-moz-linear-gradient(top, #8dd68d, #67c967);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#8dd68d), to(#67c967));background-image:-webkit-linear-gradient(top, #8dd68d, #67c967);background-image:-o-linear-gradient(top, #8dd68d, #67c967);background-image:linear-gradient(to bottom, #8dd68d, #67c967);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff8dd68d', endColorstr='#ff67c967', GradientType=0);}
+.progress-info{border-color:#2ea3c5;}
+.progress-info .bar,.progress .bar-info{background-color:#7ecae1;background-image:-moz-linear-gradient(top, #8ed1e5, #65c0db);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#8ed1e5), to(#65c0db));background-image:-webkit-linear-gradient(top, #8ed1e5, #65c0db);background-image:-o-linear-gradient(top, #8ed1e5, #65c0db);background-image:linear-gradient(to bottom, #8ed1e5, #65c0db);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff8ed1e5', endColorstr='#ff65c0db', GradientType=0);}
+.progress-warn{border-color:#d07b06;}
+.progress-warn .bar,.progress .bar-warn{background-color:#faaf47;background-image:-moz-linear-gradient(top, #fab85b, #f9a229);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#fab85b), to(#f9a229));background-image:-webkit-linear-gradient(top, #fab85b, #f9a229);background-image:-o-linear-gradient(top, #fab85b, #f9a229);background-image:linear-gradient(to bottom, #fab85b, #f9a229);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffab85b', endColorstr='#fff9a229', GradientType=0);}
+.progress-error{border-color:#c22118;}
+.progress-error .bar,.progress .bar-error{background-color:#ea625b;background-image:-moz-linear-gradient(top, #ed736d, #e74840);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#ed736d), to(#e74840));background-image:-webkit-linear-gradient(top, #ed736d, #e74840);background-image:-o-linear-gradient(top, #ed736d, #e74840);background-image:linear-gradient(to bottom, #ed736d, #e74840);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffed736d', endColorstr='#ffe74840', GradientType=0);}
+.progress-success{border-color:#3ca83c;}
+.progress-success .bar,.progress .bar-success{background-color:#7ed17e;background-image:-moz-linear-gradient(top, #8dd68d, #67c967);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#8dd68d), to(#67c967));background-image:-webkit-linear-gradient(top, #8dd68d, #67c967);background-image:-o-linear-gradient(top, #8dd68d, #67c967);background-image:linear-gradient(to bottom, #8dd68d, #67c967);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff8dd68d', endColorstr='#ff67c967', GradientType=0);}
