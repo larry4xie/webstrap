@@ -3,13 +3,14 @@
  */
 .close() {
   position: absolute;
-  .inline-block(16px, 16px);
+  .inline-block;
   cursor: pointer;
-  text-indent: -9999px;
-  background: ~"url('@{baseImgPath}/close.png')" no-repeat center center;
-  .opacity(60);
+  font-size: 18px;
+  line-height: 18px;
+  color: #7c8c8b;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
   &:hover {
     text-decoration: none;
-    .opacity(100);
+    color: #424b4b;
   }
 }
