@@ -6,7 +6,7 @@
   // default warn
   position: relative;
   border: 1px solid #DFD245;
-  padding: 8px 12px;
+  padding: @gapSize;
   background-color: #fcf8e3;
   color: #c09853;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
@@ -15,7 +15,7 @@
 
   .notify-close {
     .close();
-    right: 10px; top: 8px;
+    right: @gapSize; top: @gapSize;
   }
   .notify-icon {
     display:block;
@@ -33,10 +33,16 @@
     font-weight: 600;
     letter-spacing: 1px;
   }
-  .notify-context {
+  .notify-content {
     font-size: .9em;
   }
 }
+// no border no radius
+.notify-noborder {
+  border: none;
+  border-radius: 0px;
+}
+
 // shadow
 .notify-shadow {
   .box-shadow(0px 2px 10px rgba(50, 50, 50, 0.35));
