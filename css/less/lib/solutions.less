@@ -54,8 +54,10 @@
   filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
 }
 
-.ie9-reset-radius() {
+.ie9-reset-radius() when (@enableRadius = true) {
   border-radius: 0 \9;
+}
+.ie9-reset-radius() {
 }
 
 // Border Radius

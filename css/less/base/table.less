@@ -83,7 +83,7 @@
 // Placed here since it has to come after the potential zebra striping
 .table-hover {
   tbody {
-    tr.hover td, tr.hover th {
+    tr:hover td, tr:hover th {
       background-color: @tableBackgroundHover;
     }
   }
@@ -93,18 +93,16 @@
 // -----------------
 // Hover states for .table-hover
 .table-hover tbody tr {
-  &.success-hover td {
+  &.success:hover td {
     background-color: darken(@successBackground, 5%);
   }
-  &.error-hover td {
+  &.error:hover td {
     background-color: darken(@errorBackground, 5%);
   }
-  &.warn-hover td {
+  &.warn:hover td {
     background-color: darken(@warnBackground, 5%);
   }
-  &.info-hover td {
+  &.info:hover td {
     background-color: darken(@infoBackground, 5%);
   }
 }
-
-// TODO gird

@@ -119,7 +119,6 @@ a.btn {
 // Large
 .btn-large {
   font-size: @baseFontSize + 4px;
-  .ie9-reset-radius();
 }
 
 // Small
@@ -131,6 +130,7 @@ a.btn {
 .btn-smaller {
   font-size: @baseFontSize - 4px;
   .border-radius(@borderRadiusSmall);
+  .ie9-reset-radius();
 }
 
 .btn-primary {
